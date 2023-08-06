@@ -1,5 +1,22 @@
 ---
 description: Introducción a GIT por y para estudiantes
+cover: >-
+  https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5fGVufDB8fHx8MTY5MTMwMTg1M3ww&ixlib=rb-4.0.3&q=85
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # 👴 Como desarrollaban nuestros precursores
@@ -35,12 +52,10 @@ Pensando en la criticidad del sistema de un avión, ¿podrías imaginar poner a 
 
 Es evidente que, cuando hacemos escalar este método, nos encontramos en graves problemas. Y es acá donde entran los sistemas de control de versiones.
 
-[En el siguiente capítulo, continuaremos con el concepto del _**sistema de version de control**_](#user-content-fn-1)[^1]
+En el siguiente capítulo, continuaremos con el concepto del _**sistema de version de control**_
 
 
 
 {% embed url="https://www.youtube.com/watch?ab_channel=MoureDevbyBraisMoure&v=3GymExBkKjE" %}
 Les recomiendo este video, ¡larguísimo! pero extendido de GIT.
 {% endembed %}
-
-[^1]: 

@@ -1,0 +1,34 @@
+name: Nuestro enano
+on:
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  Saludando:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Guardo el nombre
+        run: |
+          name=$(tail -n 1 README.md)
+          echo "NAME=$name" >> $GITHUB_ENV
+      - name: Saludo al nuevo dev
+        uses: actions/github-script@v3
+        with:
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `Bienvenido/a ${{ env.NAME }}! 🚀✨😃`
+              })
+      - name: Incluyo el nombre en el README.md
+        run: |
+          git config --global user.email "bot@github.com"
+          git config --global user.name "El enano [BOT]"
+          git fetch origin main
+          git checkout main
+          echo -e "\n${{env.NAME}}" >> README.md
+          git add README.md
+          git commit -m "{{env.NAME}} acaba de aterrizar."
+          git push origin main

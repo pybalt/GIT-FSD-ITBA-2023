@@ -19,7 +19,7 @@ layout:
     visible: true
 ---
 
-# 👴 Como desarrollaban nuestros precursores
+# 👴 Introducción a GIT por y para estudiantes
 
 _<mark style="color:blue;">Authored by</mark>_ [Leonel Baltazar Bravo](http://127.0.0.1:5000/u/CsZxgQkhPXZwEisNsxqzV4WCe012 "mention")\
 
@@ -28,7 +28,7 @@ _<mark style="color:blue;">Authored by</mark>_ [Leonel Baltazar Bravo](http://12
 En esta edición, me complace explicarles acerca de una herramienta muy importante del día a día del sector de la tecnología.\
 Para poder explicarles correctamente la importancia y la utilidad de esta herramienta, comenzaremos por un breve repaso histórico.
 
-#### Como desarrollaban nuestros precursores
+## Como desarrollaban nuestros precursores
 
 ¿Alguna vez te pusiste a pensar en como se hacía el software hace muchísimos años atrás?
 

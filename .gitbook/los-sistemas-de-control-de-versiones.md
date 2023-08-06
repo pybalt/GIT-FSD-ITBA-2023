@@ -1,4 +1,10 @@
-# 😎 Los sistemas de control de versiones
+---
+cover: >-
+  https://images.unsplash.com/photo-1556075798-4825dfaaf498?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxnaXR8ZW58MHx8fHwxNjkxMzUzNzczfDA&ixlib=rb-4.0.3&q=85
+coverY: 0
+---
+
+# 🤓 Los sistemas de control de versiones
 
 Ahora pasemos de este grupo numeroso a un grupo reducido, somos cinco amigos tratando de escribir en la misma hoja. ¿Deberíamos intentar escribir todos al mismo tiempo? ¿Qué sucedería si intentásemos hacerlo?
 
@@ -13,7 +19,7 @@ Este modelo, aparte de la conexión constante, dada su naturaleza, no era muy ef
 
 ¿Ramas? ¿Fusiones? ¿Conflictos? ¿De qué estamos hablando?
 
-<figure><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--SuAdPSjR--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2aridnng7k6bly55lic9.jpeg" alt=""><figcaption><p>Esto es lo que se llama un git tree</p></figcaption></figure>
+<figure><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--SuAdPSjR--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2aridnng7k6bly55lic9.jpeg#gh-light-mode-only" alt=""><figcaption><p>Esto es lo que se llama un git tree</p></figcaption></figure>
 
 
 

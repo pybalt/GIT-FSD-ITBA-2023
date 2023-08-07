@@ -25,7 +25,7 @@ jobs:
       - name: Incluyo el nombre en el README.md
         run: |
           git config --global user.email "bot@github.com"
-          git config --global user.name "El enano [BOT]"
+          git config --global user.name "Nuestro enano:"
           git fetch origin main
           git checkout main
           echo -e "\n${{env.NAME}}" >> README.md

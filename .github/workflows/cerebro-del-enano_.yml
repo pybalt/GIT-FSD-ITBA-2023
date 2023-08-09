@@ -1,8 +1,10 @@
-name: Nuestro enano
+name: El enano
+
 on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+
 jobs:
   Saludando:
     runs-on: ubuntu-latest
@@ -28,7 +30,8 @@ jobs:
               body: `Bienvenido/a ${{ env.NAME }}! 🚀✨😃`
             });
   
-        env: {{ secrets.PERSONAL_TOKEN }} 
+        env: 
+          PATH_TOKEN: ${{ secrets.PERSONAL_TOKEN }} 
       - name: Incluyo el nombre en el README.md
         run: |
           git config --global user.email "bot@github.com"

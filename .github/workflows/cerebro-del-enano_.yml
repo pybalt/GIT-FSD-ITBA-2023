@@ -11,9 +11,32 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Guardo el nombre
-        run: |
-          name=$(tail -n 1 README.md)
-          echo "NAME=$name" >> $GITHUB_ENV
+        with:
+          script: |
+            const octokit = new Octokit({
+              auth: process.env.PATH_TOKEN
+            });
+            (async () => {
+              try {
+                const response = await octokit.request('GET /users/${{github.actor}}', {
+                  username: ${{github.actor}},
+                  headers: {
+                    'X-GitHub-Api-Version': '2022-11-28'
+                  }
+                });
+
+                // Extract the value of the "name" key from the response
+                const name = response.data.name;
+
+                // Set the value of the "NAME" environment variable
+                console.log(`::set-env name=NAME::${name}`);
+              } catch (error) {
+                console.error(`Usuario sin nombre y apellido, usando su @user_id`);
+                console.log(`::set-env name=NAME::${github.actor}`);
+              }
+            })();
+        env: 
+          PATH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
       - name: Saludo al nuevo dev
         uses: actions/github-script@v3
         with:
@@ -24,7 +47,6 @@ jobs:
               repo: context.repo.repo,
               body: `Bienvenido/a ${{ env.NAME }}! 🚀✨😃`
               })
-      
         env: 
           PATH_TOKEN: ${{ secrets.PERSONAL_TOKEN }} 
       - name: Incluyo el nombre en el README.md

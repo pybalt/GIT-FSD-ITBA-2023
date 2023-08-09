@@ -19,14 +19,16 @@ jobs:
         with:
           script: |
             const { owner, repo } = context.repo;
-            const issue_number = context.payload.workflow_run.pull_requests[0].number;
-            const token = process.env.PAT_TOKEN;
+            const token = process.env.PATH_TOKEN;
             const octokit = new github.GitHub(token);
+
+            // Get the pull request number from the event payload
+            const pullRequestNumber = github.context.payload.pull_request.number;
 
             octokit.issues.createComment({
               owner,
               repo,
-              issue_number,
+              issue_number: pullRequestNumber,
               body: `Bienvenido/a ${{ env.NAME }}! 🚀✨😃`
             });
   

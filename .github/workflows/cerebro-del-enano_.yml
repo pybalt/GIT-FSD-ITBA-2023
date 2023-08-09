@@ -18,16 +18,12 @@ jobs:
         uses: actions/github-script@v3
         with:
           script: |
-            const { owner, repo } = context.repo;
-            const pullRequestNumber = github.context.payload.pull_request.number;
-
-            // Create a comment using the github object directly
             github.issues.createComment({
-              owner,
-              repo,
-              issue_number: pullRequestNumber,
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
               body: `Bienvenido/a ${{ env.NAME }}! 🚀✨😃`
-            });
+              })
       
         env: 
           PATH_TOKEN: ${{ secrets.PERSONAL_TOKEN }} 

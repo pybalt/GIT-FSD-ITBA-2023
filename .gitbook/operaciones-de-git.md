@@ -17,3 +17,4 @@ Ya hemos descrito, de manera implícita, las principales operaciones de GIT, y a
 | Push         | Cuando estamos listos para subir los cambios guardados en la rama local, "pusheamos" los cambios a la rama remota, sincronizando ambas ramas.                                        |
 | Pull Request | Una vez la rama está lista para combinarse con la rama principal, debemos hacerlo a través del mecanismo Pull Request, que consiste en realizar una petición de fusión entre ramas.  |
 
+Para una información técnica más detallada, les recomiendo fuertemente leer la [documentación que ofrece GitHub](https://github.com/git-guides).

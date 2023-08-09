@@ -16,12 +16,19 @@ jobs:
         uses: actions/github-script@v3
         with:
           script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.workflow_run.pull_requests[0].number;
+            const token = process.env.PAT_TOKEN;
+            const octokit = new github.GitHub(token);
+
+            octokit.issues.createComment({
+              owner,
+              repo,
+              issue_number,
               body: `Bienvenido/a ${{ env.NAME }}! 🚀✨😃`
-              })
+            });
+  
+        env: {{ secrets.PERSONAL_TOKEN }} 
       - name: Incluyo el nombre en el README.md
         run: |
           git config --global user.email "bot@github.com"

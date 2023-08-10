@@ -11,8 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Guardo el nombre
-        with:
-          script: |
+        run: |
             response=$(curl -L \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer ${{ secrets.PATH_TOKEN }}" \

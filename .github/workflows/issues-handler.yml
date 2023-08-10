@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Modify reviews.md
         run: |
-          body_with_periods=$(echo "${{ env.BODY }}" | sed ':a;N;$!ba;s/\n/. /g')
+          body_with_periods=$(echo "${{ env.BODY }}" | tr '\n' '. ')
           echo "|${{ env.USER_ID }}|${{ env.TITLE }}|${body_with_periods}|" >> reviews.md
       - name: Commit and push changes
         run: |

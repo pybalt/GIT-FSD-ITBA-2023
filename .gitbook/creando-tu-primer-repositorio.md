@@ -10,7 +10,7 @@ Para poder realizar esto, cuento con que [ya tengas una cuenta de **GitHub** cre
 
 Una vez logeados en la página, nos situamos en la [página principal](#user-content-fn-3)[^3].
 
-<figure><img src="assets/image (3).png" alt=""><figcaption><p>A la izquierda de la página, hay un botón verde para crear un nuevo repositorio.</p></figcaption></figure>
+<figure><img src="assets/image (3) (1).png" alt=""><figcaption><p>A la izquierda de la página, hay un botón verde para crear un nuevo repositorio.</p></figcaption></figure>
 
 <figure><img src="assets/El nombre del repositorio.png" alt=""><figcaption><p>La ventana que aparece cuando creamos un repositorio</p></figcaption></figure>
 

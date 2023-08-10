@@ -26,4 +26,4 @@ Suele haber una rama de desarrollo, que es la versión más nueva de la aplicaci
 
 Y, sobre la rama de desarrollo, se suelen crear nuevas ramas, que son ramas atómicas (muy pequeñas) que consisten en implementar nuevas funcionalidades. Apenas esas funcionalidades estén finalizadas, se **fusionan** con la rama de desarrollo.
 
-<figure><img src="../assets/image (1).png" alt=""><figcaption><p>En celeste, la rama main, en violeta, la rama de desarrollo, y en verde, las nuevas funcionalidades.</p></figcaption></figure>
+<figure><img src="../assets/image (1) (1).png" alt=""><figcaption><p>En celeste, la rama main, en violeta, la rama de desarrollo, y en verde, las nuevas funcionalidades.</p></figcaption></figure>

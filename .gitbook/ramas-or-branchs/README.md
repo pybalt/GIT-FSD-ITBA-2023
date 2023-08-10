@@ -18,7 +18,7 @@ Un commit, es una actualización del código que queda guardada en la historia d
 
 Cuando usamos un sistema de versionado, podemos recorrer la historia del código commit a commit, de modo que podríamos viajar al pasado 😎.
 
-<figure><img src="../assets/image.png" alt=""><figcaption><p>Esto es una representación de un arbol git, donde cada círculo es un commit.</p></figcaption></figure>
+<figure><img src="../assets/image (7).png" alt=""><figcaption><p>Esto es una representación de un arbol git, donde cada círculo es un commit.</p></figcaption></figure>
 
 ¿Algúna vez viste Flash? ¿Quizás te guste Marvel?
 

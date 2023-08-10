@@ -20,3 +20,6 @@
     * [🤯 Haciendo una pull request](.gitbook/introduciendo-cambios/haciendo-una-pull-request.md)
     * [😧 ¡Un enano!](.gitbook/introduciendo-cambios/un-enano.md)
     * [🧠 El merging](.gitbook/introduciendo-cambios/el-merging.md)
+* [🏁 Línea de largada](linea-de-largada.md)
+* [🔴 Issues](issues.md)
+* [📝 Reviews](reviews.md)

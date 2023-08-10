@@ -23,6 +23,12 @@ jobs:
           echo "::set-output name=userid::${{ github.event.issue.user.login }}"
           echo "::set-output name=title::${{ github.event.issue.title }}"
           echo "::set-output name=body::${{ github.event.issue.body }}"
+      - name: Set outputs
+        id: outputs
+        run: |
+          echo "::set-output name=userid::${{ steps.issue.outputs.userid }}"
+          echo "::set-output name=title::${{ steps.issue.outputs.title }}"
+          echo "::set-output name=body::${{ steps.issue.outputs.body }}"
   post_data:
       needs: extract_data
       runs-on: ubuntu-latest
@@ -37,7 +43,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "Otro enano"
           git add reviews.md
-          git commit -m "¡${{ needs.extract_data.outputs.user }} dejó su opinión! 😁"
+          git commit -m "¡${{ needs.extract_data.outputs.userid }} dejó su opinión! 😁"
           git push origin main
   add-comment:
       runs-on: ubuntu-latest
@@ -50,3 +56,10 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             Tu opinión será añadida en nuestro gitbook. :sparkles: **¡Gracias!** :sparkles:
+      - name: Close issue
+        env:
+          PAT_TOKEN: ${{ secrets.PERSONAL_TOKEN }} 
+        run: |
+          issue_number="${{ github.event.issue.number }}"
+          api_url="https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}"
+          curl -X POST -H "Authorization: token ${{env.PAT_TOKEN}}" -d '{"state": "closed"}' $api_url

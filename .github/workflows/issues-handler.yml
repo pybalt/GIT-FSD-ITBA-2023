@@ -17,9 +17,13 @@ jobs:
       steps:
       - name: Check out code
         uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
       - name: Modify reviews.md
         run: |
-          body_with_periods=$(echo "${{ env.BODY }}" | tr -d '\n')
+          body_compressed=$(node -e "process.stdout.write(process.env.BODY.replace(/\r?\n|\r/g, ' '))")
           echo "|${{ env.USER_ID }}|${{ env.TITLE }}|${body_with_periods}|" >> reviews.md
       - name: Commit and push changes
         run: |

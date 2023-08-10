@@ -24,7 +24,7 @@ jobs:
       - name: Modify reviews.md
         run: |
           body_compressed=$(node -e "process.stdout.write(process.env.BODY.replace(/\r?\n|\r/g, ' '))")
-          echo "|${{ env.USER_ID }}|${{ env.TITLE }}|${body_with_periods}|" >> reviews.md
+          echo "|${{ env.USER_ID }}|${{ env.TITLE }}|${body_compressed}|" >> reviews.md
       - name: Commit and push changes
         run: |
           git config --local user.email "actions@github.com"

@@ -28,10 +28,10 @@ jobs:
                 const name = response.data.name;
 
                 // Set the value of the "NAME" environment variable
-                console.log(`::set-env name=NAME::${name}`);
+                echo "::set-env name=NAME::${name}"
               } catch (error) {
-                console.error(`Usuario sin nombre y apellido, usando su @user_id`);
-                console.log(`::set-env name=NAME::${github.actor}`);
+                echo "Usuario sin nombre y apellido, usando su @user_id"
+                echo "::set-env name=NAME::${github.actor}"
               }
             })();
         env: 

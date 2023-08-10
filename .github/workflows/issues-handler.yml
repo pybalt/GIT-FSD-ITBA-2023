@@ -1,0 +1,39 @@
+name: Agregar opinion
+
+
+on:
+  issues:
+    types:
+      - opened
+  workflow_dispatch:
+
+jobs:
+  extract_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Get issue details
+        id: issue
+        run: |
+          echo "::set-output name=userid::${{ github.event.issue.user.login }}"
+          echo "::set-output name=title::${{ github.event.issue.title }}"
+          echo "::set-output name=body::${{ github.event.issue.body }}"
+  post_data:
+      needs: extract_data
+      runs-on: ubuntu-latest
+      steps:
+      - name: Modify reviews.md
+        run: |
+          echo "|${{ needs.extract_data.outputs.userid }}|${{ needs.extract_data.outputs.title }}|${{ needs.extract_data.outputs.body }}|" >> reviews.md
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "Otro enano"
+          git add reviews.md
+          git commit -m "¡${{ needs.extract_data.outputs.user }} dejó su opinión! 😁"
+          git push origin main

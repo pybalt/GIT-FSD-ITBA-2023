@@ -14,3 +14,4 @@ description: Estas son las reviews dejadas
 |pybalt|Muy buenas explicaciones|Diez puntos la verdad. Lo volveria a leer. (Este mensaje fue automatizado :smile_cat:  )|
 |pybalt|Muy bueno la verdad|Lo volveria a leer.Conceptos muy claros y concisos.Buenos ejemplos.Mensaje automatizado :smile_cat: .|
 |pybalt|Muy buen libro la verdad|Lo volveriaa leer(Mensaje automatizado :smile_cat: )|
+|pybalt|basd|asda sd asd as|

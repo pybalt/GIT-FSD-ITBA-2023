@@ -11,3 +11,4 @@ description: Estas son las reviews dejadas
 ||||
 |pybalt|Muy bueno la verdad|Conceptos muy claros y definidos, lo volvería a leer
 (Este mensaje ha sido agregado con un sistema automatizado :smile_cat:)|
+|pybalt|Muy buenas explicaciones|Diez puntos la verdad. Lo volveria a leer. (Este mensaje fue automatizado :smile_cat:  )|

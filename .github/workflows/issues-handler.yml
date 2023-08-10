@@ -8,42 +8,24 @@ on:
   workflow_dispatch:
 
 jobs:
-  extract_data:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Get issue details
-        id: issue
-        run: |
-          echo "::set-output name=userid::${{ github.event.issue.user.login }}"
-          echo "::set-output name=title::${{ github.event.issue.title }}"
-          echo "::set-output name=body::${{ github.event.issue.body }}"
-      - name: Set outputs
-        id: outputs
-        run: |
-          echo "::set-output name=userid::${{ steps.issue.outputs.userid }}"
-          echo "::set-output name=title::${{ steps.issue.outputs.title }}"
-          echo "::set-output name=body::${{ steps.issue.outputs.body }}"
   post_data:
-      needs: extract_data
+      env:
+        USER_ID: ${{github.event.issue.user.login}}
+        TITLE: ${{github.event.issue.title}}
+        BODY: ${{github.event.issue.body}}
       runs-on: ubuntu-latest
       steps:
       - name: Check out code
         uses: actions/checkout@v3
       - name: Modify reviews.md
         run: |
-          echo "|${{ needs.extract_data.outputs.userid }}|${{ needs.extract_data.outputs.title }}|${{ needs.extract_data.outputs.body }}|" >> reviews.md
+          echo "|${{ env.USER_ID }}|${{ env.TITLE }}|${{ env.BODY }}|" >> reviews.md
       - name: Commit and push changes
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "Otro enano"
           git add reviews.md
-          git commit -m "¡${{ needs.extract_data.outputs.userid }} dejó su opinión! 😁"
+          git commit -m "¡${{ env.USER_ID}} dejó su opinión! 😁"
           git push origin main
   add-comment:
       runs-on: ubuntu-latest

@@ -27,6 +27,8 @@ jobs:
       needs: extract_data
       runs-on: ubuntu-latest
       steps:
+      - name: Check out code
+        uses: actions/checkout@v3
       - name: Modify reviews.md
         run: |
           echo "|${{ needs.extract_data.outputs.userid }}|${{ needs.extract_data.outputs.title }}|${{ needs.extract_data.outputs.body }}|" >> reviews.md

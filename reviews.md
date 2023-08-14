@@ -10,3 +10,4 @@ description: Estas son las reviews dejadas
 | GabrielChecchi | Muy buena la clase! | Saludos!                                                                                                   |
 |Agperalta23|Muy buena explicación|El op un tipazo, explicó git/github de forma que se le entendió todo. +10|
 |tomisampietro|Git|Muy bueno el libro y la explicacion de Git 👍 :)|
+|ayaxgw|Bien completa la introducción a GIT||

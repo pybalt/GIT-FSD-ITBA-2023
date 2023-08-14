@@ -11,3 +11,4 @@ description: Estas son las reviews dejadas
 |Agperalta23|Muy buena explicación|El op un tipazo, explicó git/github de forma que se le entendió todo. +10|
 |tomisampietro|Git|Muy bueno el libro y la explicacion de Git 👍 :)|
 |ayaxgw|Bien completa la introducción a GIT||
+|d-dorasio|Muy buena intro|Volví a leer todo en detalle, una explicación super clara del contenido. :)|

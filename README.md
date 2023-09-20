@@ -16,7 +16,9 @@ layout:
 
 Te damos la bienvenida a esta nueva aventura de la mano del ITBA 🚀
 
-Deja tu id acá abajo 👇
+<details>
+
+<summary>Deja tu id acá abajo 👇</summary>
 
 tybalt2023
 
@@ -39,3 +41,6 @@ tomisampietro
 sebanor03
 
 danizik1303
+
+</details>
+

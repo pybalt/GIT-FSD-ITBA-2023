@@ -42,9 +42,4 @@ sebanor03
 
 danizik1303
 
-</details>
-
-
-Nico2005l
-
 Nico2005l

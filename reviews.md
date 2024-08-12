@@ -13,3 +13,4 @@ description: Estas son las reviews dejadas
 |ayaxgw|Bien completa la introducción a GIT||
 |d-dorasio|Muy buena intro|Volví a leer todo en detalle, una explicación super clara del contenido. :)|
 |danizik1303|Muy buen libro|Me ayudó a entender los conceptos de 0, sin dudas lo voy a consultar seguido!|
+|tomimorales0|Lindo libro!|La verdad que esta muy completo, paso a paso. Me ayudo muchisimo a comenzar desde 0 con git|
